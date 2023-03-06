@@ -1,5 +1,8 @@
 package by.mysite.controllers;
 
+import by.mysite.model.services.FoodService;
+import by.mysite.model.services.CartService;
+import by.mysite.model.services.OrderService;
 import by.mysite.model.services.UserService;
 
 import javax.servlet.ServletException;
@@ -15,9 +18,15 @@ import static by.mysite.constants.JspConstants.MESSAGE_ATTR;
 public class AbstractController extends HttpServlet {
 
     protected UserService userservice;
+    protected FoodService foodService;
+    protected CartService cartService;
+    protected OrderService orderService;
 
     public AbstractController() {
-        userservice = UserService.getService();
+        userservice = UserService.getInstance();
+        foodService = FoodService.getInstance();
+        cartService = CartService.getInstance();
+        orderService = OrderService.getInstance();
     }
 
     @Override

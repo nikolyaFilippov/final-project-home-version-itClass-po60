@@ -11,7 +11,7 @@ public class UserService {
         dao = UserDao.getInstance();
     }
 
-    public static UserService getService() {
+    public static UserService getInstance() {
         return service == null ? new UserService() : service;
     }
 
