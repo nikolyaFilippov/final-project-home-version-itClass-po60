@@ -20,7 +20,10 @@ public class OrderController extends AbstractController {
         HttpSession session = req.getSession();
 
         if (orderService.saveOrder(session, address)) {
-            redirect(resp, HOME_JSP);
+            String orderId = (String) session.getAttribute(ORDER_ID_ATTR);
+            session.removeAttribute(ORDER_ITEMS_ATTR);
+            session.removeAttribute(ORDER_ID_ATTR);
+            forward(req, resp, HOME_JSP, "Your order number is " + orderId + ", you can print it on Orders page.");
         } else {
             forward(req, resp, CART_JSP, "BAD");
         }

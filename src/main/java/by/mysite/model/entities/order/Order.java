@@ -1,17 +1,14 @@
 package by.mysite.model.entities.order;
 
-import java.sql.Date;
-
 public class Order {
     private String id;
-    private Date date;
+    private String date;
     private int userId;
     private String address;
 
-    public Order(String id, Date date, int userId, String address) {
+    public Order(String id, String date, String address) {
         this.id = id;
         this.date = date;
-        this.userId = userId;
         this.address = address;
     }
 
@@ -19,7 +16,7 @@ public class Order {
         return id;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 

@@ -12,7 +12,7 @@
         <jsp:include page="<%=JspConstants.MENU_JSP %>"/>
         <h2>Hello ${user.name}</h2>
         <c:choose>
-          <c:when test="${ not empty orderItems}">
+          <c:when test="${not empty orderItems}">
             <h2>Yours order items: </h2>
                 <c:forEach var="item" items="${orderItems}">
                     <div class="cart-item-container">
@@ -34,6 +34,9 @@
                     <input type="text" name="<%= JspConstants.ADDRESS_PARAM %>" placeholder="Delivery address" required>
                     <input type="submit" value="Submit order">
                 </form>
+                <c:if test="${not empty message}">
+                    <h2 class="error">${message}</h2>
+                </c:if>
             </div>
           </c:when>
           <c:otherwise>

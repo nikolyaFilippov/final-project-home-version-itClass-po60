@@ -11,7 +11,9 @@
     <body>
         <jsp:include page="<%=JspConstants.MENU_JSP %>"/>
         <h2>Hello ${user.name}</h2>
-        <h1>Some content can be placed here... i.e. slider...<h2>
+        <c:if test="${not empty message}">
+            <h2>${message}</h2>
+        </c:if>
         <jsp:include page="/jsp/slider.html"/>
         <c:if test="${not empty pizzas}">
             <h2>Today we propose next pizzas:</h2>

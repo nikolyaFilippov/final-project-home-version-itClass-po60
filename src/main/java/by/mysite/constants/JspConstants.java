@@ -20,6 +20,11 @@ public class JspConstants {
     public static final String PIZZA_ATTR = "pizzas";
     public static final String DRINK_ATTR = "drinks";
     public static final String ORDER_ITEMS_ATTR = "orderItems";
+    public static final String ORDER_ID_ATTR = "orderId";
+
+    public static final String RECEIPT_ATTR = "orderReceipt";
+
+    public static final String ORDERS_LIST_ATTR = "ordersList";
 
     public static final String PATH_TO_STYLES = "/css/styles.css";
     public static final String BACKGROUND_IMAGE = "/img/pizza-dinner.jpg";
@@ -29,5 +34,7 @@ public class JspConstants {
     public static final String HOME_JSP = "/jsp/home.jsp";
     public static final String LOGIN_JSP = "/jsp/login.jsp";
     public static final String CART_JSP = "/jsp/cart.jsp";
+    public static final String ORDERS_JSP = "/jsp/orders.jsp";
+    public static final String RECEIPT_JSP = "/jsp/receipt.jsp";
     public static final String REGISTRATION_JSP = "/jsp/registration.jsp";
 }

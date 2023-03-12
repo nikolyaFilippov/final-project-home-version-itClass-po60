@@ -8,6 +8,8 @@ public class AppConstants {
     public static final String REGISTRATION_CONTROLLER = "/registration";
     public static final String CART_CONTROLLER = "/cart";
     public static final String ORDER_CONTROLLER = "/order";
+    public static final String PRINT_ORDER_CONTROLLER = "/printOrder";
+    public static final String ORDERS_HISTORY_CONTROLLER = "/ordersHistory";
 
     public static final String MENU_CONTROLLER = "/menu";
     public static final String PIZZAS_MENU = "/menu?foodType=1";

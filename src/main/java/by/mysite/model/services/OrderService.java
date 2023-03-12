@@ -1,8 +1,10 @@
 package by.mysite.model.services;
 
 import by.mysite.model.dao.OrderDao;
+import by.mysite.model.entities.order.Order;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 public class OrderService {
     private static OrderService service;
@@ -18,5 +20,13 @@ public class OrderService {
 
     public boolean saveOrder(HttpSession session, String address) {
         return dao.saveOrder(session, address);
+    }
+
+    public List<Order> getOrdersList(int userId) {
+        return dao.getOrdersList(userId);
+    }
+
+    public String getReceipt(String orderId) {
+        return dao.getReceipt(orderId);
     }
 }

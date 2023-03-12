@@ -20,7 +20,7 @@
             <input name="<%= JspConstants.EMAIL_PARAM%>" placeholder="eMail">
             <input type="submit" value="Register">
             <c:if test="${not empty message}">
-                <h2 class="error">${message}</p>
+                <h2 class="error">${message}</h2>
             </c:if>
         </form>
     </div>
